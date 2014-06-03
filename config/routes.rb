@@ -1,4 +1,6 @@
 InboxesApp::Application.routes.draw do
+  get "posts/view"
+
   devise_for :users
 
   root :to => "home#index"
