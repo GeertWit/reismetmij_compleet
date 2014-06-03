@@ -1,0 +1,38 @@
+
+
+
+  <h1>Reizigers</h1>
+<% @discussion.speakers.each do |speaker| %>
+  
+    <%= speaker.user[Inboxes::config.user_name] %>
+    <%= link_to '(verwijderen)', discussion_speaker_path(@discussion, speaker), :method => :delete %>
+   
+ <% if user_signed_in? %>
+        Unread messages: <%= @unread_discussions_count %>
+    
+<% available_users = User.all.map { |u| u unless @discussion.users.include?(u) }.delete_if { |w| w.nil? } %>
+
+<% if available_users.any? do  %> 
+<%= form_for Speaker.new, :url => discussion_speakers_path(@discussion) do |f| %>
+    <%= f.label :user_id, "Reiziger toevoegen aan het" %>
+    <%= f.collection_select :user_id, available_users, :id, :name %>
+    <%= f.submit "Toevoegen" %>
+
+<h3>berichten</h3>
+
+<% end %>
+  <%= render @discussion.messages, :as => :message %>
+
+<h3>Bericht schrijven</h3>
+<%= render "inboxes/messages/form" %> 
+
+
+  <%=  link_to "Gesprek verwijderen", discussion_speaker_path(@discussion, @discussion.find_speaker_by_user(current_user)), :method => :delete unless @discussion.private? %>
+  <%=  link_to "Inbox", discussions_path %>
+
+  
+    
+      <% end %>
+         <% end %>
+          <% end %>
+          <% end %>

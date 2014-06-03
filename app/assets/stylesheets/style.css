@@ -1,0 +1,148 @@
+body { 
+  background: url('background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo {
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+}
+
+.navbar-default .navbar-brand {
+	color: #189aca;
+	font-size: 30px;
+	margin-left: 25px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #189aca;
+}
+
+
+.navbar-default {
+	background: #fff;
+	border: 0;
+}
+
+.nav-pills a {
+	background-color: #189aca;
+	color: #fff;
+	border-radius: 10px;
+	margin: 8px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+
+.nav-pills li a:hover,
+.nav-pills li a:focus {
+	background-color: #189aca;
+}
+
+.navbar-right {
+	margin-right: 40px;
+}
+
+.slogan {
+	padding-top: 85px;
+	text-align: center;
+}
+
+.slogan h1 {
+	color: #189aca;
+	font-size: 60px;
+	font-family: 'Arvo', serif;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.slogan h2 {
+	color: #189aca;
+	font-size: 30px;
+	font-family: 'Arvo', serif;
+	font-weight: bold;
+	padding: 0 0 50px 0;
+	margin: 0;
+}
+
+.oproep {
+	border: 0;
+	font-size: 25px;
+	color: #fff;
+	background-color: #189aca;
+	border-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	width: 300px;
+	height: 57px;
+}
+
+.oproep:hover {
+	background-color: #189aca;
+	border: 0;
+}
+
+.of {
+	color: #189aca;
+	font-size: 60px;
+	font-family: 'Arvo', serif;
+	font-weight: bold;
+	padding: 20px 0 20px 0;
+	display: block;
+}
+
+.waar_heen {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 25px;
+	text-align: center;
+	margin-left: auto ;
+	margin-right: auto ;
+	width: 400px;
+}
+
+.waar_heen .col-lg-6 {
+	width: 400px;
+}
+
+.waar_heen .col-lg-6 input,
+.waar_heen .col-lg-6 button {
+	font-size: 20px;
+	height: 51px;
+}
+
+@media all and (max-width: 768px) {
+	.logo {
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar-right {
+		float: right!important;
+	}
+
+	.navbar-header {
+		float: left;
+	}
+
+	.slogan h1 {
+		font-size: 40px;
+	}
+
+	.slogan h2 {
+		font-size: 20px;
+	}
+
+	.of {
+		font-size: 40px;
+	}
+}

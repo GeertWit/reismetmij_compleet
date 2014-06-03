@@ -1,0 +1,25 @@
+<h3>Inbox</h3>
+
+<ul>
+<%= @discussions.each do |discussion| %>
+
+  <li>
+    <%= link_to discussion.users.collect{|u| u[Inboxes::config.user_name]}.join(' | '), discussion_path(discussion) %><%= discussion.updated_at %>
+  </li>
+
+<% if %>
+<% discussion.unread_for?(current_user) %>
+<li> <%= pluralize(discussion.unread_messages_count_for(current_user), "reactie") %></li>
+<% else %>
+<li>    <p>Geen ongelezen berichten</p> </li>
+
+
+
+</ul>
+<% end %>
+<% end %>
+
+<%= link_to "nieuw bericht maken", new_discussion_path %>
+
+
+

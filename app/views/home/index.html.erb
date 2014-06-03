@@ -1,0 +1,52 @@
+<h3>Home</h3>
+<% if user_signed_in? %>
+  <%= link_to "Log uit", destroy_user_session_path, :method => :delete %>
+  <%= link_to "Inbox", discussions_path %>
+<% else %>
+  
+  <%= link_to "Registreren", new_user_registration_path %>
+  <% end %>
+
+  <div class="logo">
+		<img src="img/logo.png" />
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-12 column"> 
+					<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+						<div class="navbar-header">
+							  <a class="navbar-brand" href="#">Reismetmij.nl</a>
+						</div>	
+						<ul class="nav nav-pills navbar-right">
+							<li>
+								<%= link_to "Inloggen", user_session_path %>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-12 column slogan">
+					<h1>Je hoeft niet alleen<br/> te reizen, <span class="bold">Reismetmij.</span></h1><h2> Vind hier je ideale reispartner.</h2>
+					<a class="btn btn-primary btn-lg oproep" role="button"><span>Plaats een oproep</span></a>
+					<br/>
+					<span  class="of bold">of</span>
+					<div class="waar_heen">
+						 <div class="col-lg-6">
+						    <div class="input-group">
+						      <input type="text" class="form-control" placeholder="Waar wil je heen?">
+						      <span class="input-group-btn">
+						        <button class="btn btn-default" type="button">Zoek</button>
+						      </span>
+						    </div>
+						  </div>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,13 @@
+<%= form_for @discussion, :url => discussions_path do |f| %>
+    <%= f.label :recipient_tokens %>
+    <%=  select_tag "discussion[recipient_tokens]", options_from_collection_for_select(User.all, :id, Inboxes::config.user_name), :multiple => true, :size => "4" %>
+
+    <%=  f.fields_for :messages do |j| %>
+      <%=  j.label :body %>
+   
+      <%=  j.text_area :body %>
+
+<%= f.submit %>
+    <% end %>
+
+<% end %>
