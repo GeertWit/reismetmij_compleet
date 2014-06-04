@@ -121,9 +121,7 @@ body {
 
 @media all and (max-width: 768px) {
 	.logo {
-		left: 0;
-		width: 100%;
-		text-align: center;
+		display: none;
 	}
 
 	.navbar-right {
@@ -144,5 +142,10 @@ body {
 
 	.of {
 		font-size: 40px;
+	}
+	
+	.waar_heen,
+	.waar_heen col-lg-6 {
+		width: 300px;
 	}
 }
