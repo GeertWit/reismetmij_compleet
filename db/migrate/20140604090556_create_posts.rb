@@ -1,9 +1,11 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
+      t.string :vacation
+      t.datetime :from
+      t.datetime :till
+      t.string :vacation_type
       t.string :content
-      t.string :title
-      t.integer :user_id
 
       t.timestamps
     end

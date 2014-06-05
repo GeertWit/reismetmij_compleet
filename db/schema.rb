@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140603192948) do
+ActiveRecord::Schema.define(:version => 20140605190106) do
 
   create_table "discussion_views", :force => true do |t|
     t.integer  "user_id"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(:version => 20140603192948) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "posts", :force => true do |t|
+    t.string   "vacation"
+    t.datetime "from"
+    t.datetime "till"
+    t.string   "vacation_type"
+    t.string   "content"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "speakers", :force => true do |t|
     t.integer  "user_id"
     t.integer  "discussion_id"
@@ -62,6 +72,9 @@ ActiveRecord::Schema.define(:version => 20140603192948) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "gender"
+    t.date     "birthday"
+    t.string   "extra_info"
   end
 
 end

@@ -1,5 +1,15 @@
 InboxesApp::Application.routes.draw do
+  get "posts/index"
+
+  get "posts/show"
+
+  get "posts/new"
+
+  get "posts/create"
+
   get "posts/view"
+
+
 
   devise_for :users
 

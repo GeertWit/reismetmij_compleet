@@ -7,7 +7,6 @@ gem 'rails', '3.2.12'
 
 
 gem 'devise'
-gem 'haml-rails'
 gem 'json'
 gem 'faye'
 gem 'cancan'

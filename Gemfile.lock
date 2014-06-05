@@ -190,7 +190,6 @@ DEPENDENCIES
   devise
   faker (= 1.1.2)
   faye
-  haml-rails
   inboxes
   jbuilder
   jquery-rails
